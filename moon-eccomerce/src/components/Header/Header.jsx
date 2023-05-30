@@ -1,15 +1,27 @@
+import CartWidget from "../CartWidget/CartWidget"
+
 const Header = () => {
 
     return (
-        <header className="header">
+        <header>
             <div className="header_container"> 
-                <img className="logo" src="./assets/logo.png" alt="logo" />
+                <img className="logo" src="./logo.jpg" alt="logo" />
 
                 <nav className="navbar">
-                    <a className="nav_link" href="#">PLATERÍA</a>
-                    <a className="nav_link" href="#">TEXTILES</a>
-                    <a className="nav_link" href="#">ART</a>
+                    <ul>
+                        <li>
+                            <a className="nav_link" href="#">Platería</a>                    
+                        </li>
+                        <li>
+                            <a className="nav_link" href="#">Textiles</a>
+                        </li>
+                        <li>
+                            <a className="nav_link" href="#">Art</a>
+                        </li>
+                    </ul>
                 </nav>
+                
+                <CartWidget></CartWidget>
             </div>
         </header>
     )

@@ -2,12 +2,15 @@
 const ItemListContainer = ( {greeting} ) => {
 
     return (
-        <div className="list__container">
-            <h2>Item List Container</h2>
-            <hr/>
+        <div className="list_container">
+            
+            
+            <h2 className="title">Hola!</h2>
+            
 
-            <p>{greeting}</p>
+            <p className="greeting">{greeting}</p>
         </div>
+        
     )
 }
 

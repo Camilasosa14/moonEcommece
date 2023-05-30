@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #EBE6E4;
+    div{
+        margin-left: 2%;
+        margin-right: 2%;
+        display: flex;
+        align-items:center;
+        
+        img{
+            max-width: 19em;
+        }
+        
+        nav{
+            display: inline-block;
+            margin-top: 40px;
+            
+            ul{
+                display: flex;
+                flex-direction: row;
+                list-style-type: none;
+                gap: 40px;
+                margin-left: 70rem;
+                
+                li {
+                    
+                    a{
+                        display: flex;
+                        flex-direction: row;
+                        font-size: 1.3em;
+                        color: black;
+                        font-family:'Baskervville', serif;
+                        text-decoration: none;
+                        padding-bottom: 50px;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
