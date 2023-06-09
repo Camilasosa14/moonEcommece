@@ -1,0 +1,43 @@
+#cardCont {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 80px;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+        margin-left: 10px;
+        border: solid rgba(0, 0, 0, 0.349) 0.3px;
+        padding: 30px;
+        
+        .prodName{
+            font-size: x-large ;
+            margin-bottom: 15px;
+            font-weight: 200;
+        }
+        
+        .prodImg{
+            width: 250px;
+            height: 250px;
+            justify-content: center;
+        }
+
+        .prodDesc{
+            text-align: center;
+            max-width: 250px;
+        }
+
+        .prodPrice{
+            font-size: large;
+            text-align: center;
+            margin-top: 25px;
+        }
+
+    }

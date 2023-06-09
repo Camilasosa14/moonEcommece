@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <Header/>
-      <ItemListContainer greeting="Bienvenido a Moon, tu nueva tienda de diseño favorita"></ItemListContainer>
+      <ItemListContainer></ItemListContainer>
     </div>
   )
 }
