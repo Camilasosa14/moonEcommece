@@ -1,0 +1,47 @@
+.cardDetail{
+    display:flex;
+    flex-direction: column;
+    margin-top: 70px;
+    margin-right: 400px;
+    margin-left: 400px;
+    border: solid rgba(0, 0, 0, 0.349) 0.3px;
+    padding: 30px;
+    background-color: #ebe6e43f;
+    font-family: 'Baskervville';
+    align-items: center;
+
+    .prodName{
+        font-size: x-large ;
+        margin-bottom: 15px;
+        font-weight: 200;
+    }
+    
+    .prodImg{
+        width: 350px;
+        height: 350px;
+        justify-content: center;
+    }
+    .prodDesc{
+        text-align: center;
+        max-width: 280px;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    .prodPrice{
+        font-size: 20px;
+        letter-spacing: 1px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .btnAnadir{
+        margin-top: 15px;
+        text-decoration: none;
+        background-color: #ebe6e48f;
+        border: solid 3px #ebe6e43f;
+        padding: 5px;
+        color:black;
+    }
+    .btnAnadir:hover {
+        background-color: #be9715;
+    }
+}

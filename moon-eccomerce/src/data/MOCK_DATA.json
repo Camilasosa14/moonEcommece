@@ -1,0 +1,74 @@
+[
+    {
+        "id":1,
+        "nombre":"Taza Océano",
+        "descripcion":"Taza de cerámica con base de color.",
+        "img":"../plateria3.jpg",
+        "precio":1800,
+        "category": "plateria"
+    },
+    {
+        "id":2,
+        "nombre":"Vaso Terra",
+        "descripcion":"Vaso de cerámica en tonos tierra y crudo.",
+        "img":"../plateria6.jpg",
+        "precio":1300,
+        "category": "plateria"
+    },
+    {
+        "id":3,
+        "nombre":"Contenedores Arena",
+        "descripcion":"Contenedores con tapa. Ideal para azúcar, sal y especias.",
+        "img":"../plateria1.jpg",
+        "precio":2200,
+        "category": "plateria"
+    },
+    {
+        "id":4,
+        "nombre":"Lámina Lines",
+        "descripcion":"Lámina en acrílico. Medidas: 60x100 cm.",
+        "img":"../art6.jpg",
+        "precio":4000,
+        "category":"Art"
+    },
+    {
+        "id":5,
+        "nombre":"Lámina Flowers",
+        "descripcion":"Lámina en acuarela. Medidas: 40x80 cm.",
+        "img":"../art3.jpg",
+        "precio":3800,
+        "category":"Art"
+    },
+    {
+        "id":6,
+        "nombre":"Láminas Sun",
+        "descripcion":"Láminas diptico, arte digital. Medidas: 40x70 cm.",
+        "img":"../art2.jpg",
+        "precio":6000,
+        "category":"Art"
+    },
+    {
+        "id":7,
+        "nombre":"Almohadón Rombo ",
+        "descripcion":"Almohadón pintado a mano con decoración en las puntas.",
+        "img":"../textil6.jpg",
+        "precio":2000,
+        "category":"Textiles"
+    },
+    {
+        "id":8,
+        "nombre":"Tapiz India",
+        "descripcion":"Tapiz macramé y madera en tonos tierra.",
+        "img":"../textil2.jpg",
+        "precio":5200,
+        "category":"Textiles"
+    },
+    {
+        "id":9,
+        "nombre":"Repasadores Aqua",
+        "descripcion":"Repasadores de lino en tono crema y celeste.",
+        "img":"../textil1.jpg",
+        "precio":6000,
+        "category":"Textiles"
+    }
+]
