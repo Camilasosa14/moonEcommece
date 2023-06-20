@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
+import ItemCount from "../ItemCounter/ItemCounter"
 
-const ItemDetail = ({nombre, precio, category, descripcion, img}) => {
+const ItemDetail = ({nombre, precio, category, descripcion, img, stock }) => {
 
     return (
         <div className="cardDetail">
@@ -10,9 +11,14 @@ const ItemDetail = ({nombre, precio, category, descripcion, img}) => {
             <p className="prodDesc">{descripcion}</p>
 
             <h4 className="prodPrice">Precio: ${precio}</h4>
-            <Link className="btnAnadir">Añadir al carrito</Link>
+
+            <ItemCount initial={1} stock={stock} />
         </div>
+
+        
     )
+    
 }
+
 
 export default ItemDetail

@@ -5,7 +5,8 @@
         "descripcion":"Taza de cerámica con base de color.",
         "img":"../plateria3.jpg",
         "precio":1800,
-        "category": "plateria"
+        "category": "plateria",
+        "stock":5
     },
     {
         "id":2,
@@ -13,7 +14,8 @@
         "descripcion":"Vaso de cerámica en tonos tierra y crudo.",
         "img":"../plateria6.jpg",
         "precio":1300,
-        "category": "plateria"
+        "category": "plateria",
+        "stock":14
     },
     {
         "id":3,
@@ -21,7 +23,8 @@
         "descripcion":"Contenedores con tapa. Ideal para azúcar, sal y especias.",
         "img":"../plateria1.jpg",
         "precio":2200,
-        "category": "plateria"
+        "category": "plateria",
+        "stock":20
     },
     {
         "id":4,
@@ -29,7 +32,8 @@
         "descripcion":"Lámina en acrílico. Medidas: 60x100 cm.",
         "img":"../art6.jpg",
         "precio":4000,
-        "category":"Art"
+        "category":"art",
+        "stock":8
     },
     {
         "id":5,
@@ -37,7 +41,8 @@
         "descripcion":"Lámina en acuarela. Medidas: 40x80 cm.",
         "img":"../art3.jpg",
         "precio":3800,
-        "category":"Art"
+        "category":"art",
+        "stock":11
     },
     {
         "id":6,
@@ -45,7 +50,8 @@
         "descripcion":"Láminas diptico, arte digital. Medidas: 40x70 cm.",
         "img":"../art2.jpg",
         "precio":6000,
-        "category":"Art"
+        "category":"art",
+        "stock":10
     },
     {
         "id":7,
@@ -53,7 +59,8 @@
         "descripcion":"Almohadón pintado a mano con decoración en las puntas.",
         "img":"../textil6.jpg",
         "precio":2000,
-        "category":"Textiles"
+        "category":"textiles",
+        "stock":14
     },
     {
         "id":8,
@@ -61,7 +68,8 @@
         "descripcion":"Tapiz macramé y madera en tonos tierra.",
         "img":"../textil2.jpg",
         "precio":5200,
-        "category":"Textiles"
+        "category":"textiles",
+        "stock":8
     },
     {
         "id":9,
@@ -69,6 +77,7 @@
         "descripcion":"Repasadores de lino en tono crema y celeste.",
         "img":"../textil1.jpg",
         "precio":6000,
-        "category":"Textiles"
+        "category":"textiles",
+        "stock":17
     }
 ]

@@ -1,0 +1,38 @@
+.counterControls{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+
+    .btnCounter{
+        padding: 5px;
+        background-color: #ebe6e48f;
+        border: solid 3px #ebe6e43f;
+        border-radius: 10%;
+        font-size: larger;
+    }
+    .btnCounter:hover {
+        background-color: #be9715;
+    }
+
+    .counter{
+        font-family: 'Baskervville';
+        font-size: 20px;
+        font-weight: 100;
+    }
+
+}
+
+.btnAnadir{
+    margin-top: 15px;
+    background-color: #ebe6e48f;
+    border: solid 3px #ebe6e43f;
+    padding: 5px;
+    color:black;
+    font-size: 15px;
+    font-family: 'Baskervville';
+}
+.btnAnadir:hover {
+    background-color: #be9715;
+}

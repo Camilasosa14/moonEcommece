@@ -24,7 +24,7 @@
     .prodDesc{
         text-align: center;
         max-width: 280px;
-        font-size: 18px;
+        font-size: 16px;
         margin-top: 10px;
     }
     .prodPrice{
@@ -32,16 +32,7 @@
         letter-spacing: 1px;
         text-align: center;
         margin-top: 20px;
+        font-weight: 500;
     }
-    .btnAnadir{
-        margin-top: 15px;
-        text-decoration: none;
-        background-color: #ebe6e48f;
-        border: solid 3px #ebe6e43f;
-        padding: 5px;
-        color:black;
-    }
-    .btnAnadir:hover {
-        background-color: #be9715;
-    }
+    
 }
