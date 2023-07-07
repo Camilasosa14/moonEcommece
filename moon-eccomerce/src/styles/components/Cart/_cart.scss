@@ -1,0 +1,92 @@
+.cartContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family:'Baskervville', 'serif';
+    background-color: #ddcccce1;
+    border-radius: 5%;
+    margin-left:25% ;
+    margin-right: 25%;
+    margin-top: 2%;
+
+    h2{
+        font-weight: 100;
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+        margin-top: 10px;
+    }
+    
+
+    .prodContainer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15%;
+        justify-items: center;
+        padding-left:25% ;
+        padding-right: 25%;
+        
+        .itemCart{
+            border-bottom: 2px solid #ad41168e;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            
+            h4{
+            font-weight: 100;
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 10px;
+            }
+            .imgCart{
+                max-width: 200px;
+                padding: 5%;
+                background-color:#ebe6e48e;
+            }
+            p{
+                text-align: center;
+                font-size: 1.1rem;
+            }
+            .deleteBtn{
+                color: #ad41168e;
+                background-color: #ddcccce1;
+                border: #ad41168e;
+                font-size: large;
+                margin-left: 45%;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+            .deleteBtn:hover{
+                background-color: #ad41168e;
+                color: #ddcccce1;
+            }
+        }
+
+    }
+
+    .totalCart{
+        h5{
+            font-size: 1.3rem;
+            font-weight: 100;
+        }
+    }
+
+    .emptyCart{
+        border: solid 2px #ebe6e48e;
+        background-color: #ad41168e;
+        font-family: 'Baskervville';
+        font-size: 1rem;
+        color: black;
+        text-decoration: none;
+        text-align: center;
+        margin-top: 15px;
+        padding: 10px;
+        border-radius: 5%;
+        margin-bottom: 15px;
+    }
+    .emptyCart:hover{
+        background-color:#ebe6e48e ;
+    }
+
+}
+
+

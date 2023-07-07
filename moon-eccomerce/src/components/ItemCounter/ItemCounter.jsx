@@ -1,30 +1,32 @@
 import { useState } from "react"
 
 
-const ItemCount = ({stock, initial, onAdd}) => {
-    const [quantity, setQuantity] = useState(initial)
+const ItemCount = ({stock, cantidad, setCantidad, handleAgregar}) => {
+    
 
-    const increment = () => {
-        if(quantity < stock) {
-            setQuantity(quantity+1)
+    const handleSumar = () => {
+        if(cantidad < stock) {
+            setCantidad(cantidad+1)
         }
     }
 
-    const decrement = () => {
-        if(quantity > 1) {
-            setQuantity(quantity-1)
+    const handleRestar = () => {
+        if(cantidad > 1) {
+
+            setCantidad(cantidad-1)
         }
     }
 
 return(
     <div className="counterConteiner">
         <div className="counterControls">
-            <button className="btnCounter" onClick={decrement}>-</button>
-            <h4 className="counter" >{quantity} </h4>
-            <button className="btnCounter" onClick={increment}>+</button>
+            <button className="btnCounter" onClick={handleRestar}>-</button>
+            <h4 className="counter" >{cantidad} </h4>
+            <button className="btnCounter" onClick={handleSumar}>+</button>
         </div>
 
-            <button className="btnAnadir" >Añadir al carrito</button>
+        <button className="btnAnadir" onClick={handleAgregar}>Añadir al carrito</button>
+            
     </div>
 )
 
