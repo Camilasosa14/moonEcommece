@@ -5,10 +5,11 @@ import { useParams } from "react-router-dom"
 
 const ItemListContainer = ( {} ) => {
 
+    const currentPath = window.location.pathname;
+
     const [productos, setProductos] = useState([])
 
     const {catId} = useParams ()
-    console.log (catId)
 
     useEffect(() => {
         pedirDatos()
@@ -17,18 +18,31 @@ const ItemListContainer = ( {} ) => {
                 setProductos(res)
             } else {
                 setProductos( res.filter((items) => items.category === catId) )
+                
             }
         })
     }, [catId])
     
-
-    return (
-        <div>
-
+    if (currentPath  == "/") {
+        return (
+            <>
+            <div className="homeContainer">
+                <h2 className="title">Bienvenido a Moon</h2>
+            <h3 className="greeting">Tu nueva tienda de diseño favorita</h3>
+            </div>
+            
             <ItemList item={productos} /> 
-
-        </div>
+            </>
+            
+        )
+    } 
+    return (
+        <ItemList item={productos} /> 
     )
+
+    
+    
+
 }
 
 export default ItemListContainer

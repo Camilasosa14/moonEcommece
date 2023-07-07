@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 
-const ItemCount = ({stock, cantidad, setCantidad, handleAgregar}) => {
+const ItemCount = ({stock, max, cantidad, setCantidad, handleAgregar}) => {
     
 
     const handleSumar = () => {
@@ -20,7 +20,7 @@ const ItemCount = ({stock, cantidad, setCantidad, handleAgregar}) => {
 return(
     <div className="counterConteiner">
         <div className="counterControls">
-            <button className="btnCounter" onClick={handleRestar}>-</button>
+            <button className= "btnCounter"  onClick={handleRestar}>-</button>
             <h4 className="counter" >{cantidad} </h4>
             <button className="btnCounter" onClick={handleSumar}>+</button>
         </div>

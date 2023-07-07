@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     gap: 80px;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 90px;
     margin-bottom: 100px;
 }
 
@@ -41,8 +41,15 @@
             letter-spacing: 1px;
             text-align: center;
             margin-top: 15px;
+            font-weight: 100;
         }
 
+        .alert{
+            color:#ad4116;
+            text-align: center;
+            font-weight:bold;
+            margin-top: 8px;
+        }
         .btnCard{
             border: solid 2px #ebe6e48e;
             background-color: #ebe6e48e;

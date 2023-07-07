@@ -1,20 +1,24 @@
 import ItemCard from "../ItemCard/ItemCard"
+import { useLocation } from "react-router-dom";
+
 
 const ItemList = ({item}) => {
     
+    const location = useLocation();
+    const currentPath = location.pathname;
+    const categoryName = currentPath.split('/').pop();
+    
     return(
-        <div className="list_container">
-            <h2 className="title">Hola!</h2>
-            <p className="greeting">Bienvenido a Moon, tu nueva tienda de diseño favorita</p>
-
-<div id="cardCont">
-    {
+        <>
+        <div>
+            <h2 className="prodTitle" >Nuestros productos: {categoryName}</h2>
+            <div id="cardCont">
+                {
                 item.map((prod) => <ItemCard key={prod.id} {...prod} />)  
-                
-            }
-</div>
-            
+                }
+            </div>
         </div>
+        </>
     )
 }
 

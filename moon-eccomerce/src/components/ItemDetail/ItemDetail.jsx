@@ -46,7 +46,7 @@ const ItemDetail = ({id, nombre, precio, descripcion, img, stock }) => {
                     />
             }
 
-            <button onClick={handleVolver}>Volver</button>
+            <button className="btnVolver" onClick={handleVolver}>Volver</button>
         </div>
 
 
