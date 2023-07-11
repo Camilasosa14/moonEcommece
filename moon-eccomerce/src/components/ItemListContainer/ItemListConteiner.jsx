@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { pedirDatos } from "../../funcionalidades/pedirDatos";
 import ItemList from "../ItemList/itemList";
 import { useParams } from "react-router-dom"
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { database } from "../../firebase/config";
 
 const ItemListContainer = ( {} ) => {
 
@@ -12,15 +13,18 @@ const ItemListContainer = ( {} ) => {
     const {catId} = useParams ()
 
     useEffect(() => {
-        pedirDatos()
-        .then((res) => {
-            if (!catId) {
-                setProductos(res)
-            } else {
-                setProductos( res.filter((items) => items.category === catId) )
+    const productosRef = collection(database, "productos")
+    const q = catId
+                ? query(productosRef, where("category", "==", catId))
+                :productosRef
                 
-            }
+    getDocs(q)
+        .then((resp) => {
+            const items = resp.docs.map((doc) => ({...doc.data(), id: doc.id}) )
+            setProductos(items)
         })
+        .catch(e => console.log(e))
+    
     }, [catId])
     
     if (currentPath  == "/") {
@@ -28,7 +32,7 @@ const ItemListContainer = ( {} ) => {
             <>
             <div className="homeContainer">
                 <h2 className="title">Bienvenido a Moon</h2>
-            <h3 className="greeting">Tu nueva tienda de diseño favorita</h3>
+                <h3 className="greeting">Tu nueva tienda de diseño favorita</h3>
             </div>
             
             <ItemList item={productos} /> 
