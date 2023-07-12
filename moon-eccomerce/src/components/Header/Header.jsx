@@ -27,6 +27,8 @@ const Header = () => {
                 </nav>
                 
                 <CartWidget></CartWidget>
+                <Link to="/login">LOG</Link>
+
             </div>
         </header>
     )
