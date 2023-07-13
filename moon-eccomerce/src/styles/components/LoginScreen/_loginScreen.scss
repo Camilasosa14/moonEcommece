@@ -27,14 +27,25 @@
             font-size: medium;
         }
         .btnForm{
-            font-family: 'Baskervville';
-            margin-block-start: 8px;
-            font-size: medium;
+            font-family: 'Baskervville', serif;
+            padding: 2%;
             background-color: #ddcccce1;
             border: none;
+            border-radius:5px ;
+            font-size: 1rem;
+            margin-top: 10px;
         }
         .btnForm:hover{
-            background-color: #ebe6e48e;
+        background-color: #ebe6e48e;
+        }
+
+        .link{
+            color: black;
+            text-align: center;
+            margin-top: 15px;
+        }
+        .link:hover{
+            text-decoration: none;
         }
     }
 }

@@ -1,0 +1,61 @@
+.ordenContainer{
+    background-color: #ebe6e48e;
+    border-radius: 15px;
+    max-width: 100%;
+    padding: 20px;
+    margin-left: 25%;
+    margin-top: 3%;
+    margin-right: 25%;
+    font-family: 'Baskervville', serif;
+    text-align: center;
+    h2{
+        font-weight: 100;
+        font-size: 2.5rem;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        }
+    
+    p{
+        font-size: 1.1rem;
+        margin-top: 5px;
+        margin-bottom: 35px;
+    }
+
+        .formOrden{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            
+            .inputForm{
+                padding: 3px;
+                font-family: 'Baskervville', serif;
+                font-size: 1rem;
+            }
+        
+            .btnSubmit{
+                font-family: 'Baskervville', serif;
+                padding: 1%;
+                background-color: #ddcccce1;
+                border: none;
+                border-radius:5px ;
+                font-size: 1rem;
+            }
+            .btnSubmit:hover{
+                background-color: #ebe6e48e;
+            }
+        }
+    
+    .link{
+        border: 1px solid black;
+        padding: 5px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: black;
+    }
+    .link:hover{
+        background-color: #ddcccce1;
+        border: none;
+    }
+    
+}

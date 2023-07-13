@@ -1,9 +1,11 @@
 import { useContext, useState } from "react"
 import { AuthContext } from "../Context/AuthContext"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+
 
 const RegisterScreen = () => {
     const {register} = useContext(AuthContext)
+    const navigate = useNavigate()
 
     const [values, setValues] = useState({
         nombre: '',
@@ -15,6 +17,8 @@ const RegisterScreen = () => {
     const handleSubmit = (e) => {
         e.preventDefault ()
         register(values)
+        navigate("/")
+
     }
 
     const handleInputChange = (e) => {
@@ -71,7 +75,7 @@ const RegisterScreen = () => {
 
                     
                     <button className="btnForm" type="submit" >Registrarse</button>
-                    <Link className="btnForm" type="submit" to="/login" >Ya estoy registrado</Link>
+                    <Link  className="link" type="submit" to="/login" >Ya estoy registrado</Link>
                 </form>
             </div>
 

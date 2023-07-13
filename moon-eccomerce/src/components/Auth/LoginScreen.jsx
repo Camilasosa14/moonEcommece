@@ -20,7 +20,6 @@ const LoginScreen = () => {
         e.preventDefault ()
         login(values)
         navigate("/")
-
     }
 
     const handleInputChange = (e) => {
@@ -31,9 +30,7 @@ const LoginScreen = () => {
         
     }
 
-    
     return (
-
         <div className="authContainer">
             <div className="authModal">
                 <h2>Iniciar sesión</h2>
@@ -58,14 +55,11 @@ const LoginScreen = () => {
                     name='password'
                     />
 
-                    
-
                     <button className="btnForm" type="submit">  Iniciar sesión</button>
 
-                    <Link to="/register" className="">Registrarse</Link>
+                    <Link to="/register" className="link">Registrarse</Link>
                 </form>
             </div>
-
         </div>
     )
 
