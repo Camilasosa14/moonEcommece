@@ -1,26 +1,20 @@
-import { useContext, useDebugValue, useState } from "react"
+import { useContext, useState } from "react"
 import { AuthContext } from "../Context/AuthContext"
-import { Link, Navigate, useNavigate } from "react-router-dom"
-import { redirect } from "react-router-dom"
-import RegisterScreen from "./RegisterScreen"
-import Order from "../Order/Order"
+import { Link } from "react-router-dom"
 
-const LoginScreen = () => {
-    const {login, user} = useContext(AuthContext)
-    const navigate = useNavigate()
-    const [error, setError] = useState(null)
+const RegisterScreen = () => {
+    const {register} = useContext(AuthContext)
 
     const [values, setValues] = useState({
         nombre: '',
+        apellido:'',
         email: '',
         password: ''
     })
 
-    const handleSubmit =  (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault ()
-        login(values)
-        navigate("/")
-
+        register(values)
     }
 
     const handleInputChange = (e) => {
@@ -31,14 +25,31 @@ const LoginScreen = () => {
         
     }
 
-    
-    return (
 
+    return (
         <div className="authContainer">
             <div className="authModal">
-                <h2>Iniciar sesión</h2>
+                <h2>Registrarse</h2>
                 <hr />
+
                 <form onSubmit={handleSubmit}>
+                    <input
+                    value={values.nombre}
+                    onChange={handleInputChange}
+                    type="text" 
+                    placeholder="Nombre"
+                    className="formInput"
+                    name='nombre'
+                    />
+
+                    <input
+                    value={values.apellido}
+                    onChange={handleInputChange}
+                    type="text" 
+                    placeholder="Apellido"
+                    className="formInput"
+                    name='apellido'
+                    />
 
                     <input 
                     value={values.email}
@@ -59,16 +70,13 @@ const LoginScreen = () => {
                     />
 
                     
-
-                    <button className="btnForm" type="submit">  Iniciar sesión</button>
-
-                    <Link to="/register" className="">Registrarse</Link>
+                    <button className="btnForm" type="submit" >Registrarse</button>
+                    <Link className="btnForm" type="submit" to="/login" >Ya estoy registrado</Link>
                 </form>
             </div>
 
         </div>
     )
-
 }
 
-export default LoginScreen
+export default RegisterScreen

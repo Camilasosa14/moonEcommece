@@ -2,11 +2,13 @@ import { useContext } from "react"
 import { CartContext } from "../Context/CartContext"
 import {FaTrashAlt} from 'react-icons/fa'
 import { Link } from "react-router-dom"
+import { AuthContext } from "../Context/AuthContext"
 
 
 const Cart = () => {
     const {cart, totalCompra, vaciarCarrito, eliminarProducto} = useContext(CartContext)
 
+    const {user} = useContext(AuthContext)
     if (cart.length === 0) {
         return(
             <div className="empty_cart">
@@ -39,7 +41,19 @@ const Cart = () => {
             <h5 className="totalCart">Total de su compra: ${totalCompra()} </h5>
             <div>
                 <button className="btns_cart emptyCart"onClick={vaciarCarrito} >Vaciar carrito</button>
-            <button className="btns_cart btn_finalizar">Finalizar compra</button>
+
+                {
+                    user.logged
+                    ? <>
+                    <Link to="/order" className="btns_cart btn_finalizar">Finalizar compra</Link>
+                    </>
+                    : <>
+                    <Link className="btns_cart btn_finalizar" onClick={alert("Inicie sesion")}>Finalizar compra</Link>
+                    </>
+
+                    
+                }
+            
             </div> 
             
         </div>

@@ -1,9 +1,12 @@
 import CartWidget from "../CartWidget/CartWidget"
 import { Link } from "react-router-dom"
-
+import {FaRegUserCircle} from "react-icons/fa"
+import { useContext } from "react"
+import { AuthContext } from "../Context/AuthContext"
 
 const Header = () => {
 
+    const {user, logout} = useContext(AuthContext)
     return (
         <header>
             <div className="header_container"> 
@@ -27,7 +30,18 @@ const Header = () => {
                 </nav>
                 
                 <CartWidget></CartWidget>
-                <Link to="/login">LOG</Link>
+
+                {
+                    user.logged 
+                    ? <>
+                    <button onClick={logout}>OUT</button>
+                    </>
+                    :<>
+                    <Link to="/login"><FaRegUserCircle/></Link>
+                    
+                    </>
+                }
+                
 
             </div>
         </header>

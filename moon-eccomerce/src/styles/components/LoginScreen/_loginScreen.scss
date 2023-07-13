@@ -1,0 +1,41 @@
+.authContainer{
+    font-family: 'Baskervville';
+    
+    .authModal{
+        margin-top: 20px;
+        background-color:  #ebe6e48e;
+        border-radius: 15px;
+        margin-left: 30%;
+        margin-right: 30%;
+        padding: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+            margin-bottom: 20px;
+            font-weight: 100;
+        }
+        
+    form{
+        display: flex;
+        flex-direction: column;
+        
+        .formInput{
+            font-family: 'Baskervville';
+            margin-bottom: 15px;
+            padding: 2%;
+            font-size: medium;
+        }
+        .btnForm{
+            font-family: 'Baskervville';
+            margin-block-start: 8px;
+            font-size: medium;
+            background-color: #ddcccce1;
+            border: none;
+        }
+        .btnForm:hover{
+            background-color: #ebe6e48e;
+        }
+    }
+}
+}
