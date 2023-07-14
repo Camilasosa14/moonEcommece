@@ -187,8 +187,6 @@ const Order = () => {
                 />
                 
                 <button className="btnSubmit"type="submit">Enviar</button>
-
-
             </form>
         </div>
     )
