@@ -10,6 +10,7 @@ const Header = () => {
     const {user, logout} = useContext(AuthContext)
     return (
         <header>
+            
             <div className="header_container"> 
                 <Link to="/"><img className="logo" src="../logo.jpg" alt="logo" /></Link>
 
