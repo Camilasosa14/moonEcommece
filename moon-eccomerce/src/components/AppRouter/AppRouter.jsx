@@ -9,6 +9,7 @@ import RegisterScreen from "..//Auth/RegisterScreen"
 import Order from "..//Order/Order"
 import { useContext } from "react"
 import { AuthContext } from "../Context/AuthContext"
+import Footer from "../Footer/Footer"
 
 const AppRouter = () => {
     const {user} = useContext(AuthContext)
@@ -31,6 +32,7 @@ const AppRouter = () => {
                 
                 </Routes>
                 
+                <Footer/>
             </BrowserRouter>
 
 

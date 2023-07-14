@@ -2,7 +2,7 @@ import { createContext } from "react";
 import { useState, useEffect } from "react";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { auth } from "../../firebase/config";
-import { redirect } from "react-router-dom";
+
 import { onAuthStateChanged } from "firebase/auth";
 
 
@@ -14,14 +14,16 @@ export const AuthContextProvider = ({children}) => {
         email: null,
     })
 
+    const [error, setError] = useState(null)
+
     const login =  (values) => {
         signInWithEmailAndPassword(auth, values.email, values.password)
-        .catch(e => console.log(e))
+        .catch(e =>setError(true))
     }
 
     const register = (values) => {
         createUserWithEmailAndPassword(auth, values.email, values.password)
-        .catch(e => console.log(e))
+        .catch(e =>setError(true))
     }
 
     useEffect( () =>{
@@ -34,6 +36,7 @@ export const AuthContextProvider = ({children}) => {
                     logged: true,
                     email: user.email
                 })
+                setError(false)
             } else {
                 setUser({
                     logged: false,
@@ -48,7 +51,7 @@ export const AuthContextProvider = ({children}) => {
     }
 
     return (
-        <AuthContext.Provider value={{user, login, register, logout}}>
+        <AuthContext.Provider value={{user, error, login, register, logout}}>
             {children}
         </AuthContext.Provider>
     )

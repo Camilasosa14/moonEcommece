@@ -1,11 +1,20 @@
-import { useContext, useDebugValue, useState } from "react"
+import { useContext, useDebugValue, useState, useEffect } from "react"
 import { AuthContext } from "../Context/AuthContext"
 import { Link, useNavigate } from "react-router-dom"
 
 
 const LoginScreen = () => {
-    const {login, user} = useContext(AuthContext)
+    const {login, user, error} = useContext(AuthContext)
     const navigate = useNavigate()
+
+    useEffect(()=>{
+        if(user.logged && !error){
+        navigate("/")
+    }else if(error){
+        alert ("Error en los datos")
+    }
+    },[user, error])
+
 
     const [values, setValues] = useState({
         nombre: '',
@@ -15,12 +24,7 @@ const LoginScreen = () => {
 
     const handleSubmit =  (e) => {
         e.preventDefault ()
-
         login(values)
-        user.logged 
-            ? navigate("/")
-            : alert ("Error en los datos") 
-        
     }
 
     const handleInputChange = (e) => {
