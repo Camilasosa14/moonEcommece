@@ -3,6 +3,8 @@ import { CartContext } from "../Context/CartContext"
 import { query, writeBatch, documentId, collection, addDoc, updateDoc, doc, getDocs, where } from "firebase/firestore"
 import { database } from "../../firebase/config"
 import { Link, Navigate } from "react-router-dom"
+import Swal from "sweetalert2"
+
 
 
 
@@ -30,22 +32,47 @@ const Order = () => {
         e.preventDefault()
     
         if(values.nombre.length === 0 || values.nombre.length < 3){
-            alert("El nombre es obligatorio")
+            Swal.fire({
+                icon: 'error',
+                text: 'El nombre es obligatorio',
+                confirmButtonColor:'#ad41168e',
+            })
             return
         }
 
         if(values.apellido.length === 0 || values.apellido.length < 3){
-            alert("El apellido es obligatorio")
+            Swal.fire({
+                icon: 'error',
+                text: 'El apellido es obligatorio',
+                confirmButtonColor:'#ad41168e',
+            })
             return
         }
 
         if(values.direccion.length === 0 || values.direccion.length < 6 ){
-            alert("La direccion es obligatoria")
+            Swal.fire({
+                icon: 'error',
+                text: 'La dirección es obligatoria',
+                confirmButtonColor:'#ad41168e',
+            })
             return
         }
 
         if(values.email.length === 0 ){
-            alert("El email es obligatorio")
+            Swal.fire({
+                icon: 'error',
+                text: 'El email es obligatorio',
+                confirmButtonColor:'#ad41168e',
+            })
+            return
+        }
+
+        if(values.telefono.length === 0 ){
+            Swal.fire({
+                icon: 'error',
+                text: 'El telefono es obligatorio',
+                confirmButtonColor:'#ad41168e',
+            })
             return
         }
         

@@ -1,17 +1,28 @@
 import { useContext, useDebugValue, useState, useEffect } from "react"
 import { AuthContext } from "../Context/AuthContext"
 import { Link, useNavigate } from "react-router-dom"
+import Swal from "sweetalert2"
+
+
 
 
 const LoginScreen = () => {
     const {login, user, error} = useContext(AuthContext)
     const navigate = useNavigate()
 
+
     useEffect(()=>{
         if(user.logged && !error){
         navigate("/")
     }else if(error){
-        alert ("Error en los datos")
+        Swal.fire({
+            icon: 'error',
+            title: 'Datos incorrectos',
+            text: 'Email o contraseña incorrecta',
+            footer: 'Si no tenés cuenta, dirigite a Registrarse',
+            confirmButtonColor:'#ad41168e',
+        })
+        
     }
     },[user, error])
 

@@ -50,8 +50,6 @@ const Cart = () => {
                     : <>
                     <Link to="/login" className="btns_cart btn_finalizar" >Finalizar compra</Link>
                     </>
-
-                    
                 }
             
             </div> 

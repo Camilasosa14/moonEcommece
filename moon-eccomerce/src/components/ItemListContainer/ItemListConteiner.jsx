@@ -3,6 +3,7 @@ import ItemList from "../ItemList/itemList";
 import { useParams } from "react-router-dom"
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { database } from "../../firebase/config";
+import Home from "../Home/Home";
 
 const ItemListContainer = ( {} ) => {
 
@@ -30,11 +31,8 @@ const ItemListContainer = ( {} ) => {
     if (currentPath  == "/") {
         return (
             <>
-            <div className="homeContainer">
-                <h2 className="title">Bienvenido a Moon</h2>
-                <h3 className="greeting">Tu nueva tienda de diseño favorita</h3>
-            </div>
             
+            <Home/>
             <ItemList item={productos} /> 
             </>
             
@@ -43,6 +41,7 @@ const ItemListContainer = ( {} ) => {
     return (
         <ItemList item={productos} /> 
     )
+    
 }
 
 export default ItemListContainer

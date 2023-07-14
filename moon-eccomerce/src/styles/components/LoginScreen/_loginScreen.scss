@@ -1,6 +1,10 @@
+
+
+
 .authContainer{
-    font-family: 'Baskervville';
-    
+    font-family: 'Baskervville', 'serif';
+    margin-bottom: 12%;
+
     .authModal{
         margin-top: 20px;
         background-color:  #ebe6e48e;
@@ -11,6 +15,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        
+        
         h2{
             margin-bottom: 20px;
             font-weight: 100;

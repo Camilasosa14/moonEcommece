@@ -7,7 +7,8 @@ const Footer = () => {
 
     return (
         <div className="footerContainer">
-            <hr />
+            <p>Seguinos en nuestra redes</p>
+            
             <a href="*"><FaWhatsapp/></a>
             <a href="*"><FaInstagram/></a>
             <a href="*"><FaFacebook/></a>
