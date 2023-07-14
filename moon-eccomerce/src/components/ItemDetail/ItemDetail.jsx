@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import ItemCount from "../ItemCounter/ItemCounter"
 import { useContext, useState } from "react"
 import { CartContext } from "../Context/CartContext"
@@ -29,12 +29,9 @@ const ItemDetail = ({id, nombre, precio, descripcion, img, stock }) => {
         return (
         <div className="cardDetail">
             <h2 className="prodName">{nombre}</h2>
-
             <img className="prodImg" src={img} alt={nombre}/>
             <p className="prodDesc">{descripcion}</p>
-
             <h4 className="prodPrice">Precio: ${precio}</h4>
-
             { 
                 isInCart(id)
                     ?<ButtonsCart></ButtonsCart>
@@ -45,12 +42,8 @@ const ItemDetail = ({id, nombre, precio, descripcion, img, stock }) => {
                     handleAgregar={handleAgregar}
                     />
             }
-
             <button className="btnVolver" onClick={handleVolver}>Volver</button>
         </div>
-
-
-        
     )
     
 }

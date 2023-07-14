@@ -1,14 +1,11 @@
 import { useContext, useDebugValue, useState } from "react"
 import { AuthContext } from "../Context/AuthContext"
-import { Link, Navigate, useNavigate } from "react-router-dom"
-import { redirect } from "react-router-dom"
-import RegisterScreen from "./RegisterScreen"
-import Order from "../Order/Order"
+import { Link, useNavigate } from "react-router-dom"
+
 
 const LoginScreen = () => {
     const {login, user} = useContext(AuthContext)
     const navigate = useNavigate()
-    const [error, setError] = useState(null)
 
     const [values, setValues] = useState({
         nombre: '',
@@ -18,8 +15,12 @@ const LoginScreen = () => {
 
     const handleSubmit =  (e) => {
         e.preventDefault ()
+
         login(values)
-        navigate("/")
+        user.logged 
+            ? navigate("/")
+            : alert ("Error en los datos") 
+        
     }
 
     const handleInputChange = (e) => {
